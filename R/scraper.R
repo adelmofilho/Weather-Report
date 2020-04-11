@@ -31,7 +31,7 @@ bot_server <- function(settings_path){
 
   msg <- msg_to_post(holidays, which_holiday)
 
-  rtweet::post_tweet(msg, token = token)
+  rtweet::post_tweet(msg, token = token, hoje)
 }
 
 get_page <- function(year){
