@@ -46,3 +46,4 @@ renv/staging/*
 
 # Data dirs
 artifacts/*.json
+artifacts/*.rds
