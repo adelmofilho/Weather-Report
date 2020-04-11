@@ -1,0 +1,13 @@
+^renv$
+^renv\.lock$
+^\.lintr$
+^LICENSE\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^artifacts$
+^data$
+^docs$
+^scripts$
+^workflow$
+^Dockerfile$
+^docker-compose\.yml$

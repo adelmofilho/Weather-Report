@@ -1,0 +1,7 @@
+linters: with_defaults(
+     = NULL, # 
+    dummy_linter = NULL
+  )
+exclusions: list(
+    ""
+  )
