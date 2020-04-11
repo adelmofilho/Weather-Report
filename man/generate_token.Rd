@@ -4,18 +4,10 @@
 \alias{generate_token}
 \title{ZENIT-POLAR substitution cipher method of encryption}
 \usage{
-generate_token(
-  json_path = "artifacts/keys_tokens.json",
-  app_name = "Holiday-bot",
-  token_path = "artifacts/rtweet_token.rds"
-)
+generate_token(settings_path)
 }
 \arguments{
-\item{json_path}{message to encrypt}
-
-\item{app_name}{first one-way cipher}
-
-\item{token_path}{second one-way cipher}
+\item{settings_path}{message to encrypt}
 }
 \value{
 encrypted message

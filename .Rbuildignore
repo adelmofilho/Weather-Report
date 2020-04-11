@@ -11,3 +11,4 @@
 ^workflow$
 ^Dockerfile$
 ^docker-compose\.yml$
+^.*\.gitkeep

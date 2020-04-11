@@ -4,10 +4,10 @@
 \alias{bot_server}
 \title{ZENIT-POLAR substitution cipher method of encryption}
 \usage{
-bot_server(token_path)
+bot_server(settings_path)
 }
 \arguments{
-\item{token_path}{second one-way cipher}
+\item{settings_path}{second one-way cipher}
 }
 \value{
 encrypted message

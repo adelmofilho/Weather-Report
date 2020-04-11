@@ -8,9 +8,7 @@
 #'
 #' @name generate_token
 #'
-#' @param json_path message to encrypt
-#' @param app_name first one-way cipher
-#' @param token_path second one-way cipher
+#' @param settings_path message to encrypt
 #'
 #' @importFrom jsonlite read_json
 #' @importFrom rtweet create_token

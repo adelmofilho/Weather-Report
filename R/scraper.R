@@ -8,14 +8,18 @@
 #'
 #' @name bot_server
 #'
-#' @param token_path second one-way cipher
+#' @param settings_path second one-way cipher
 #'
 #' @importFrom lubridate today
 #' @importFrom rtweet post_tweet
 #' @export
 bot_server <- function(settings_path){
 
-  token <- readRDS(token_path)
+  Sys.setlocale("LC_TIME", "C")
+
+  settings <- jsonlite::read_json(settings_path)
+
+  token <- readRDS(settings$token_path)
 
   hoje <- lubridate::today()
 
@@ -23,14 +27,13 @@ bot_server <- function(settings_path){
 
   holidays <- get_holidays(page_url)
 
-  which_holiday <- hoje_tem(holidays[['data']], hoje)
+  which_holiday <- hoje_tem(holidays[['dia']], hoje)
 
   msg <- msg_to_post(holidays, which_holiday)
 
   rtweet::post_tweet(msg, token = token)
 }
 
-#' @export
 get_page <- function(year){
 
     paste0("https://www.anbima.com.br/feriados/fer_nacionais/", year, ".asp")
@@ -42,36 +45,32 @@ get_page <- function(year){
 #' @importFrom janitor clean_names
 #' @importFrom dplyr mutate
 #' @importFrom magrittr "%>%"
-#' @export
+#' @import rlang
 get_holidays <- function(page_url){
 
   xml2::read_html(page_url) %>%
     rvest::html_nodes("table.interna") %>%
     rvest::html_table(header = TRUE) %>%
-    .[[1]] %>%
+    as.data.frame() %>%
     janitor::clean_names() %>%
-    dplyr::mutate(data = as.Date(format(as.Date(data), "%d-%m-%y"), "%y-%m-%d"))
+    dplyr::mutate(dia = as.Date(format(as.Date(.data$data), "%d-%m-%y"), "%y-%m-%d"))
 
 }
 
-#' @export
 hoje_tem <- function(feriados, hoje){
-
-  Sys.setlocale("LC_TIME", "C")
 
   which(feriados == hoje)
 }
 
-#' @export
-msg_to_post <- function(holidays, which_holiday){
+msg_to_post <- function(holidays, which_holiday, hoje){
 
   if (length(which_holiday) == 0) {
 
-    msg <- "Hoje NÃO é um feriado nacional :("
+    msg <- paste0("Hoje, ", format(hoje, "%d/%m/%Y"),", N\u00c3O \u00e9 um feriado nacional.")
 
   } else {
 
-    msg <- paste0("Hoje é feriado!!! ", holidays[["feriado"]][which_holiday])
+    msg <- paste0("Hoje, ", format(hoje, "%d/%m/%Y"),", \u00e9 feriado!!! ", holidays[["feriado"]][which_holiday])
 
   }
 

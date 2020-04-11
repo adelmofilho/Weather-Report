@@ -2,10 +2,7 @@
 
 export(bot_server)
 export(generate_token)
-export(get_holidays)
-export(get_page)
-export(hoje_tem)
-export(msg_to_post)
+import(rlang)
 importFrom(dplyr,mutate)
 importFrom(janitor,clean_names)
 importFrom(jsonlite,read_json)

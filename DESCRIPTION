@@ -15,3 +15,13 @@ Roxygen: list(markdown = TRUE)
 Suggests: 
     testthat
 RoxygenNote: 7.1.0
+Imports: 
+    dplyr,
+    janitor,
+    jsonlite,
+    lubridate,
+    magrittr,
+    rtweet,
+    rvest,
+    xml2,
+    rlang
