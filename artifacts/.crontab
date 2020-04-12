@@ -1,0 +1,1 @@
+18 9 * * */1 cd /home && /usr/local/bin/R -e "weatherReport::bot_server('/home/artifacts/settings.json')" >> /var/log/cron.log 2>&1
