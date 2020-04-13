@@ -1,6 +1,8 @@
 pipeline {
-    docker { image 'adelmofilho/r-base:3.6.2' }
-
+    
+    agent {
+        docker { image 'adelmofilho/r-base:3.6.2' }
+    }
     stages {
         stage('LookUp') {
             steps {
