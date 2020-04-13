@@ -12,8 +12,19 @@ pipeline {
         
     stage('Loo2kUp') {
         steps {
-            sh "R -e 'devtools::build()'"
+            sh "R -e 'renv::restore()'"
+            
         }
     }
+        
+    stage('BUild') {
+        steps {
+            sh "R -e 'devtools::build()'"
+            
+        }
+    }    
+        
+        
+        
     }
 }
