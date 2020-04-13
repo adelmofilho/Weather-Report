@@ -10,7 +10,7 @@ pipeline {
             }
         }
         
-    stage('LookUp') {
+    stage('Loo2kUp') {
         steps {
             sh "R -e 'Sys.time()'"
         }
