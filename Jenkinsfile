@@ -12,7 +12,7 @@ pipeline {
         
     stage('Loo2kUp') {
         steps {
-            sh "R -e devtools::build()"
+            sh "R -e 'devtools::build()'"
         }
     }
     }
