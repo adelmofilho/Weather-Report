@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Where') {
+        stage('donde') {
             steps {
                 echo $PWD            
             }
