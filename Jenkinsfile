@@ -12,7 +12,7 @@ pipeline {
         
     stage('Loo2kUp') {
         steps {
-            sh "R -e 'Sys.time()'"
+            sh "R -e devtools::build()"
         }
     }
     }
