@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo $PWD            
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                 ls -lah
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                ws s3 cp s3://hco-jenkins-bucket/keys_tokens.json  asd.json
             }
         }
     }
