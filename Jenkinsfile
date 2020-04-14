@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('LookUp') {
             steps {
-                sh "ls -lah"
+                sh "R -e 'install.packages(\\\'devtools\\\', repos = \\\'http://cran.r-project.org\\\')'"
             }
         }
         
@@ -19,7 +19,7 @@ pipeline {
         
     stage('BUild') {
         steps {
-            sh "R -e 'install.packages(\\\'devtools\\\', repos = \\\'http://cran.r-project.org\\\')'"
+            
             sh "R -e 'devtools::build()'"
             
         }
