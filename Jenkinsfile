@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('LookUp') {
             steps {
-                sh "R -e 'install.packages(\\\'devtools\\\', repos = \\\'http://cran.r-project.org\\\')'"
+                sh "R -e 'install.packages()'"
             }
         }
         
