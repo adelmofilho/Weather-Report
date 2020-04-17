@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('LookUp') {
             steps {
-                sh "echo $PWD"
+                sh "chmod +x deploy/pre_build.sh"
+                sh "deploy/pre_build.sh"
             }
         }
         
@@ -24,6 +25,22 @@ pipeline {
             
         }
     }    
+
+    stage('pos') {
+        steps {
+            
+            sh "ls -lah"
+            
+        }
+    }    
+
+    stage('pos2') {
+        steps {
+            
+            sh "ls -lah ../"
+            
+        }
+    } 
         
         
         
