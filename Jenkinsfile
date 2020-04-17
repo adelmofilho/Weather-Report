@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('LookUp') {
             steps {
-                sh "R -e 'install.packages(\\'devtools\\\')'"
+                sh deploy/pre_build.sh
             }
         }
         
