@@ -5,13 +5,21 @@ RUN R -e "remotes::install_github('adelmofilho/Weather-Report')"
 
 WORKDIR /home/artifacts
 
-COPY settings.json /home/artifacts/settings.json
-COPY keys_tokens.json /home/artifacts/keys_tokens.json
+RUN apt-get update && apt-get install -y cron awscli
 
-RUN apt-get update && apt-get install -y cron
+ARG AWS_ACCESS_KEY_ID
+ENV AWS_ACCESS_KEY_ID ${AWS_ACCESS_KEY_ID}
+
+ARG AWS_DEFAULT_REGION
+ENV AWS_DEFAULT_REGION ${AWS_DEFAULT_REGION}
+
+ARG AWS_SECRET_ACCESS_KEY
+ENV AWS_SECRET_ACCESS_KEY ${AWS_SECRET_ACCESS_KEY}
+
+RUN aws s3 cp s3://hco-jenkins-bucket/keys_tokens.json /home/artifacts/keys_tokens.json
+RUN aws s3 cp s3://hco-jenkins-bucket/settings.json /home/artifacts/settings.json
 
 RUN touch /var/log/cron.log
-
 
 ADD .crontab /etc/cron.d/hello-cron
 RUN chmod 0644 /etc/cron.d/hello-cron
