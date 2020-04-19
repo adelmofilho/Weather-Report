@@ -7,6 +7,8 @@ WORKDIR /home/artifacts
 
 RUN apt-get update && apt-get install -y cron awscli
 
+RUN echo $PWD
+
 ARG AWS_ACCESS_KEY_ID
 ENV AWS_ACCESS_KEY_ID ${AWS_ACCESS_KEY_ID}
 
