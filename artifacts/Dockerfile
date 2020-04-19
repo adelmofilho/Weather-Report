@@ -1,5 +1,7 @@
 FROM adelmofilho/r-base:3.6.2
 
+RUN apt-get update && apt-get install -y cron awscli
+
 ARG AWS_ACCESS_KEY_ID
 ENV AWS_ACCESS_KEY_ID ${AWS_ACCESS_KEY_ID}
 
@@ -10,8 +12,6 @@ ARG AWS_SECRET_ACCESS_KEY
 ENV AWS_SECRET_ACCESS_KEY ${AWS_SECRET_ACCESS_KEY}
 
 RUN echo $AWS_SECRET_ACCESS_KEY
-
-RUN apt-get update && apt-get install -y cron awscli
 
 RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
 RUN R -e "remotes::install_github('adelmofilho/Weather-Report')"
