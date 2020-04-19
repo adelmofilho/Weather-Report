@@ -1,15 +1,17 @@
 pipeline {
     
     agent any
-    environment {
-        AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
-        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
-        AWS_DEFAULT_REGION    = credentials('AWS_DEFAULT_REGION')
-    }
+
     stages {
+        stage('pre') {
+            steps {
+                echo env.AWS_ACCESS_KEY_ID
+            }
+        }
+        
         stage('Build') {
             steps {
-                sh "docker build -t weatherreport:deploy artifacts/"
+                sh "docker build -t weatherreport:deploy --build-arg artifacts/"
             }
         }
 
