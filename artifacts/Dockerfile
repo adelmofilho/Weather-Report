@@ -7,8 +7,6 @@ WORKDIR /home/artifacts
 
 RUN apt-get update && apt-get install -y cron awscli
 
-RUN echo $PWD
-
 ARG AWS_ACCESS_KEY_ID
 ENV AWS_ACCESS_KEY_ID ${AWS_ACCESS_KEY_ID}
 
@@ -17,6 +15,8 @@ ENV AWS_DEFAULT_REGION ${AWS_DEFAULT_REGION}
 
 ARG AWS_SECRET_ACCESS_KEY
 ENV AWS_SECRET_ACCESS_KEY ${AWS_SECRET_ACCESS_KEY}
+
+RUN echo $AWS_SECRET_ACCESS_KEY
 
 RUN aws s3 cp s3://hco-jenkins-bucket/keys_tokens.json /home/artifacts/keys_tokens.json
 RUN aws s3 cp s3://hco-jenkins-bucket/settings.json /home/artifacts/settings.json
