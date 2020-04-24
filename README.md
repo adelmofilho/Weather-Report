@@ -34,10 +34,9 @@ Para isso foi combinado o template de cookiecutter do projeto [`Pearl Jam`](http
 
 ## Deploy
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/LbdIJNp"><a href="//imgur.com/a/LbdIJNp"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+O deploy do bot segue o seguinte desenho.
 
-
-
+![](https://i.imgur.com/4YxjhFg.png)
 
 
 
