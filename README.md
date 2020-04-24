@@ -30,7 +30,7 @@ Mas, havia a vontade de validar uma proposta:
 
 > Desenvolver e realizar o deploy de uma aplicação em container docker de maneira *unificada*, isto é, em um mesmo projeto.
 
-Para isso foi combinado o template de cookiecutter do projeto [`Pearl Jam`](https://github.com/adelmofilho/Pearl-Jam) com as imagens de container docker do projeto [`Whitesnake`](https://github.com/adelmofilho/Whitesnake).
+Para isso, foram combinados (1) o template de cookiecutter do projeto [`Pearl Jam`](https://github.com/adelmofilho/Pearl-Jam) e (2) as imagens de container docker do projeto [`Whitesnake`](https://github.com/adelmofilho/Whitesnake).
 
 ## Deploy
 
