@@ -10,7 +10,7 @@ get_page <- function(year){
 get_holidays <- function(page_url){
 
   xml2::read_html(page_url) %>%
-    rvest::html_nodes("table.interna") %>%
+    rvest::html_nodes('table.interna') %>%
     rvest::html_table(header = TRUE) %>%
     .[[1]] %>%
     janitor::clean_names() %>%

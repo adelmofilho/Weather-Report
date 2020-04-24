@@ -2,19 +2,19 @@
 % Please edit documentation in R/authentication.R
 \name{generate_token}
 \alias{generate_token}
-\title{ZENIT-POLAR substitution cipher method of encryption}
+\title{Token Generation}
 \usage{
 generate_token(settings_path)
 }
 \arguments{
-\item{settings_path}{message to encrypt}
+\item{settings_path}{path and filename of settings file}
 }
 \value{
-encrypted message
+rds object
 }
 \description{
-Returns a message encrypted by ZENIT-POLAR substitution cipher method of encryption using by default TENIS-POLAR key.
+Creates a twitter bot token given twitter api credentials
 }
 \details{
-This kind of encryption replace the nth character of 1th key to the nth character of 2nd key and vice versa.
+Saves a twitter bot token as rds object
 }

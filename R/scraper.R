@@ -1,8 +1,8 @@
-#' ZENIT-POLAR substitution cipher method of encryption
+#' Twitter bot server main function
 #'
-#' Returns a message encrypted by ZENIT-POLAR substitution cipher method of encryption using by default TENIS-POLAR key.
+#' Posts a tweet based on ANBIMA holiday database
 #'
-#' @details This kind of encryption replace the nth character of 1th key to the nth character of 2nd key and vice versa.
+#' @details Given twitter bot token it tweets a message concerns holidays
 #'
 #' @return encrypted message
 #'

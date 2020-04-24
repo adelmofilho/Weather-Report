@@ -7,9 +7,12 @@
 ^artifacts$
 ^data$
 ^docs$
+^configs$
 ^scripts$
-^workflow$
+^deploy$
 ^Dockerfile$
+^Jenkinsfile$
 ^docker-compose\.yml$
 ^.*\.gitkeep
 ^.github$
+^\.travis\.yml$

@@ -1,0 +1,5 @@
+{
+    "json_path": "artifacts/keys_tokens.json",
+    "token_path": "artifacts/rtweet_token.rds",
+    "app_name": "Holiday-bot"
+}

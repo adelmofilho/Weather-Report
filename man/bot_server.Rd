@@ -2,7 +2,7 @@
 % Please edit documentation in R/scraper.R
 \name{bot_server}
 \alias{bot_server}
-\title{ZENIT-POLAR substitution cipher method of encryption}
+\title{Twitter bot server main function}
 \usage{
 bot_server(settings_path)
 }
@@ -13,8 +13,8 @@ bot_server(settings_path)
 encrypted message
 }
 \description{
-Returns a message encrypted by ZENIT-POLAR substitution cipher method of encryption using by default TENIS-POLAR key.
+Posts a tweet based on ANBIMA holiday database
 }
 \details{
-This kind of encryption replace the nth character of 1th key to the nth character of 2nd key and vice versa.
+Given twitter bot token it tweets a message concerns holidays
 }
