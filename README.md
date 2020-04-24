@@ -6,7 +6,8 @@
 <p align="center">
 <a href="http://www.repostatus.org/#active"><img alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." src="https://www.repostatus.org/badges/latest/active.svg"></a>
 <a href="https://www.gnu.org/licenses/gpl-3.0"><img alt="License" src="https://img.shields.io/badge/License-GPLv3-blue.svg"></a>
-[![Travis build status](https://travis-ci.com/adelmofilho/Weather-Report.svg?branch=master)](https://travis-ci.com/adelmofilho/Weather-Report)
+<a href="https://travis-ci.com/adelmofilho/Weather-Report"><img src="https://travis-ci.com/adelmofilho/Weather-Report.svg?branch=master"></a>
+<a href="https://codecov.io/gh/adelmofilho/Weather-Report?branch=master"><img src="https://codecov.io/gh/adelmofilho/Weather-Report/branch/master/graph/badge.svg"></a>
 
 <br>
 

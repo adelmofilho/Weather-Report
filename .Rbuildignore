@@ -16,3 +16,4 @@
 ^.*\.gitkeep
 ^.github$
 ^\.travis\.yml$
+^codecov\.yml$
