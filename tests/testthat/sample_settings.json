@@ -1,0 +1,5 @@
+{
+    "json_path": "sample_keys_tokens.json",
+    "token_path": "rtweet_token.rds",
+    "app_name": "test-bot"
+}
