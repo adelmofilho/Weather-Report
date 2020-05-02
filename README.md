@@ -34,6 +34,8 @@ Mas, havia a vontade de validar uma proposta:
 
 Para isso, foram combinados (1) o template de cookiecutter do projeto [`Pearl Jam`](https://github.com/adelmofilho/Pearl-Jam) e (2) as imagens de container docker do projeto [`Whitesnake`](https://github.com/adelmofilho/Whitesnake).
 
+O produto deste projeto é um bot de twitter que executa diariamente uma rotina de verificação de feriados através da base de dados disponível no site da [ANBIMA](https://www.anbima.com.br/pt_br/index.htm).
+
 ## Deploy
 
 O deploy do bot segue o seguinte desenho.
